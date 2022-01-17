@@ -1,5 +1,26 @@
 {
   "name": "hexo-fb-comments",
-  "version": "0.0.1",
-  "main": "index"
+  "version": "0.1.0",
+  "description": "Facebook comments plugin for Hexo!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hms5232/hexo-fb-comments.git"
+  },
+  "keywords": [
+    "hexo",
+    "fb",
+    "facebook",
+    "comment",
+    "comments"
+  ],
+  "author": "hms5232",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hms5232/hexo-fb-comments/issues"
+  },
+  "homepage": "https://github.com/hms5232/hexo-fb-comments#readme"
 }
