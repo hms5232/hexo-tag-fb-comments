@@ -1,5 +1,5 @@
 {
-  "name": "hexo-fb-comments",
+  "name": "hexo-fb-comments-plugin",
   "version": "0.1.0",
   "description": "Facebook comments plugin for Hexo!",
   "main": "index.js",
