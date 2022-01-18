@@ -28,7 +28,7 @@ fb_comments:
   lang: zh_TW  # 語言
   numPosts: 5  # 顯示幾則留言
   order_by: reverse-time  # 留言排序依據，有 time 和 reverse-time
-  colorscheme: dark  # 介面風格，有 white 和 dark 可選
+  colorscheme: dark  # 介面風格，有 light 和 dark 可選
   width: 100%  # 寬度
 ```
 

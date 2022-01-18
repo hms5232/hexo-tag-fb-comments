@@ -40,10 +40,10 @@ function fbComments(args, content) {
     <div class="fb-comments"
       data-href="${this.permalink}"
       data-width="${_config.width}"
-      data-numposts="${_config.numPosts}">
+      data-numposts="${_config.numPosts}"
       data-order-by="${_config.order_by}"
-      data-colorscheme="${data-colorscheme}"
-    </div>
+      data-colorscheme="${_config.colorscheme}"
+    ></div>
   `;
 
   return html;
