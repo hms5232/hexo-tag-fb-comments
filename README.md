@@ -1,15 +1,15 @@
-# hexo-fb-comments
+# hexo-tag-fb-comments
 Facebook comments plugin for Hexo!
 
 ## 使用方式
 ### 安裝套件
 如果你使用 npm：
 ```
-npm i hexo-fb-comments-plugin
+npm i hexo-tag-fb-comments
 ```
 如果你使用 yarn：
 ```
-yarn add hexo-fb-comments-plugin
+yarn add hexo-tag-fb-comments
 ```
 其他的請自行依照所使用的套件管理器指令安裝。
 
