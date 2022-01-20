@@ -24,6 +24,7 @@ fb_comments:
 ```yml
 fb_comments:
   enabled: true  # 是否開啟 FB 留言外掛
+  to: post  # 有 post、page 或 default（全選）等，詳細選項請參考 hexo injector
   app_id:   # FB 應用程式編號
   lang: zh_TW  # 語言
   num_posts: 5  # 顯示幾則留言

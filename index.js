@@ -10,6 +10,7 @@ function initConfig() {
   if (!_config.enabled)
     return false;
 
+  _config.to = _config.to || 'post';
   _config.lang = _config.lang || 'zh_TW';
   _config.numPosts = _config.num_posts || 5;
   _config.orderBy = _config.order_by || 'reverse-time';
@@ -49,5 +50,5 @@ function fbComments(args, content) {
   return html;
 }
 
-hexo.extend.injector.register('head_end', fbCommentsHead(), 'post');
+hexo.extend.injector.register('head_end', fbCommentsHead(), _config.to);
 hexo.extend.tag.register('fb_comments', fbComments, {async: true});
