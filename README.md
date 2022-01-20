@@ -24,11 +24,11 @@ fb_comments:
 ```yml
 fb_comments:
   enabled: true  # 是否開啟 FB 留言外掛
-  appId:   # FB 應用程式編號
+  app_id:   # FB 應用程式編號
   lang: zh_TW  # 語言
-  numPosts: 5  # 顯示幾則留言
+  num_posts: 5  # 顯示幾則留言
   order_by: reverse-time  # 留言排序依據，有 time 和 reverse-time
-  colorscheme: dark  # 介面風格，有 light 和 dark 可選
+  colorscheme: light  # 介面風格，有 light 和 dark 可選
   width: 100%  # 寬度
 ```
 

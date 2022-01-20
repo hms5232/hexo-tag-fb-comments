@@ -11,9 +11,9 @@ function initConfig() {
     return false;
 
   _config.lang = _config.lang || 'zh_TW';
-  _config.numPosts = _config.numPosts || 5;
-  _config.order_by = _config.order_by || 'reverse-time';
-  _config.colorscheme = _config.colorscheme || 'dark';
+  _config.numPosts = _config.num_posts || 5;
+  _config.orderBy = _config.order_by || 'reverse-time';
+  _config.colorscheme = _config.colorscheme || 'light';
   _config.width = _config.width || '100%';
 
   return true;
@@ -24,7 +24,7 @@ function fbCommentsHead() {
   if (!initConfig()) return("");
 
   let html = `
-    <meta property="fb:app_id" content="${_config.appId}" />
+    <meta property="fb:app_id" content="${_config.app_id}" />
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/${_config.lang}/sdk.js#xfbml=1&version=v12.0"></script>
   `;
@@ -41,7 +41,7 @@ function fbComments(args, content) {
       data-href="${this.permalink}"
       data-width="${_config.width}"
       data-numposts="${_config.numPosts}"
-      data-order-by="${_config.order_by}"
+      data-order-by="${_config.orderBy}"
       data-colorscheme="${_config.colorscheme}"
     ></div>
   `;
