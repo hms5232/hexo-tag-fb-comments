@@ -20,11 +20,11 @@ yarn add hexo-tag-fb-comments
 fb_comments:
   enabled: true
 ```
-至少要這樣，FB 留言外掛才會啟用。但個人推薦再加入 `appId` 才可以統一管理留言。完整可設定的範例如下：
+至少要這樣，FB 留言外掛才會啟用。但個人推薦再加入 `app_id` 才可以統一管理留言。完整可設定的範例如下：
 ```yml
 fb_comments:
   enabled: true  # 是否開啟 FB 留言外掛
-  to: post  # 有 post、page 或 default（全選）等，詳細選項請參考 hexo injector
+  to: post  # 有 post、page 或 default（全部）等，詳細選項請參考 hexo injector
   app_id:   # FB 應用程式編號
   lang: zh_TW  # 語言
   num_posts: 5  # 顯示幾則留言
@@ -32,6 +32,8 @@ fb_comments:
   colorscheme: light  # 介面風格，有 light 和 dark 可選
   width: 100%  # 寬度
 ```
+
+各參數對應的臉書設定細節請參考：https://developers.facebook.com/docs/plugins/comments/
 
 #### 文章或頁面
 請在想顯示 FB 留言外掛的地方，放上下面這個標籤：
