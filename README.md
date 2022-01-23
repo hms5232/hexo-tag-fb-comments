@@ -1,5 +1,15 @@
 # hexo-tag-fb-comments
+
+![](https://img.shields.io/npm/v/hexo-tag-fb-comments?style=flat-square)
+![](https://img.shields.io/npm/v/hexo-tag-fb-comments/latest?color=success)
+![](https://img.shields.io/npm/dt/hexo-tag-fb-comments)
+![](https://img.shields.io/github/commits-since/hms5232/hexo-tag-fb-comments/latest?label=commits%20since%20latest%20release&logoColor=yellow&style=social)
+![](https://img.shields.io/npm/l/hexo-tag-fb-comments?style=flat-square)
+
 Facebook comments plugin for Hexo!
+
+## 需求
+* Hexo 5 或更新的版本
 
 ## 使用方式
 ### 安裝套件
