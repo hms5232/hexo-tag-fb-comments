@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/hms5232/hexo-tag-fb-comments/issues"
   },
-  "homepage": "https://github.com/hms5232/hexo-tag-fb-comments#readme"
+  "homepage": "https://github.com/hms5232/hexo-tag-fb-comments#readme",
+  "peerDependencies": {
+    "hexo": ">=5.0.0"
+  }
 }
