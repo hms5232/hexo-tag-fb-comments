@@ -6,6 +6,8 @@
 ![](https://img.shields.io/github/commits-since/hms5232/hexo-tag-fb-comments/latest?label=commits%20since%20latest%20release&logoColor=yellow&style=social)
 ![](https://img.shields.io/npm/l/hexo-tag-fb-comments?style=flat-square)
 
+**正體中文（zh-TW）**| [English (en-US)](README_en-US.md)
+
 Facebook comments plugin for Hexo!
 
 ## 需求
