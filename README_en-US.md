@@ -1,9 +1,10 @@
 # hexo-tag-fb-comments
 
-![](https://img.shields.io/npm/v/hexo-tag-fb-comments?style=flat-square)
+[![](https://img.shields.io/npm/v/hexo-tag-fb-comments?style=flat-square)](https://www.npmjs.com/package/hexo-tag-fb-comments)
 ![](https://img.shields.io/npm/v/hexo-tag-fb-comments/latest?color=success)
 ![](https://img.shields.io/npm/dt/hexo-tag-fb-comments)
-![](https://img.shields.io/github/commits-since/hms5232/hexo-tag-fb-comments/latest?label=commits%20since%20latest%20release&logoColor=yellow&style=social)
+![](https://img.shields.io/npm/dependency-version/hexo-tag-fb-comments/peer/hexo)
+[![](https://img.shields.io/github/commits-since/hms5232/hexo-tag-fb-comments/latest?label=commits%20since%20latest%20release&logoColor=yellow&style=social)](https://github.com/hms5232/hexo-tag-fb-comments)
 ![](https://img.shields.io/npm/l/hexo-tag-fb-comments?style=flat-square)
 
 [正體中文（zh-TW）](README.md)| **English (en-US)**
