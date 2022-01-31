@@ -22,13 +22,16 @@ function initConfig() {
 function fbCommentsHead() {
   if (!initConfig()) return '';
 
-  let html = `
-    <meta property="fb:app_id" content="${_config.app_id}" />
+  // if app_id no value => null
+  // if app_id not exists => undefined
+  let html = _config.app_id == null ?
+    `` :
+    `<meta property="fb:app_id" content="${_config.app_id}" />`;
+
+  return html + `
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/${_config.lang}/sdk.js#xfbml=1&version=v12.0"></script>
   `;
-
-  return html;
 }
 
 // 留言外掛
