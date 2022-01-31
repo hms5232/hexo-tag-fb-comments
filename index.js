@@ -2,13 +2,11 @@ let _config = null;
 
 // 抓設定
 function initConfig() {
-  if (!hexo.config.fb_comments)
-    return false;
+  if (!hexo.config.fb_comments) return false;
 
   _config = hexo.config.fb_comments;
 
-  if (!_config.enabled)
-    return false;
+  if (!_config.enabled) return false;
 
   _config.to = _config.to || 'post';
   _config.lang = _config.lang || 'zh_TW';
@@ -22,7 +20,7 @@ function initConfig() {
 
 // 寫 <head>
 function fbCommentsHead() {
-  if (!initConfig()) return("");
+  if (!initConfig()) return '';
 
   let html = `
     <meta property="fb:app_id" content="${_config.app_id}" />
@@ -35,9 +33,9 @@ function fbCommentsHead() {
 
 // 留言外掛
 function fbComments(args, content) {
-  if (!initConfig()) return("");
+  if (!initConfig()) return '';
 
-  let html = `
+  return `
     <div class="fb-comments"
       data-href="${this.permalink}"
       data-width="${_config.width}"
@@ -46,8 +44,6 @@ function fbComments(args, content) {
       data-colorscheme="${_config.colorscheme}"
     ></div>
   `;
-
-  return html;
 }
 
 hexo.extend.injector.register('head_end', fbCommentsHead(), _config.to);
