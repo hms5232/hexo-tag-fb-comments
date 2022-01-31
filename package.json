@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-fb-comments",
-  "version": "0.3.2",
+  "version": "0.3.3-Sabure.1",
   "description": "Facebook comments plugin for Hexo!",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,10 @@
     "url": "https://github.com/hms5232/hexo-tag-fb-comments/issues"
   },
   "homepage": "https://github.com/hms5232/hexo-tag-fb-comments#readme",
+  "files": [
+    "index.js",
+    "README_en-US.md"
+  ],
   "peerDependencies": {
     "hexo": ">=5.0.0"
   },
