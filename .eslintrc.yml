@@ -9,11 +9,13 @@ parserOptions:
 rules: {
   operator-linebreak: [
     "error",
-    "after", {
+    "after",
+    {
       "overrides": {
           "?": "before",
-          ":": "before"
+          ":": "before",
         }
     }
-  ]
+  ],
+  "require-jsdoc": ["off"],
 }
