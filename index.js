@@ -24,9 +24,9 @@ function fbCommentsHead() {
 
   // if app_id no value => null
   // if app_id not exists => undefined
-  const fbAppMeta = _config.app_id == null ?
-    `` :
-    `<meta property="fb:app_id" content="${_config.app_id}" />`;
+  const fbAppMeta = _config.app_id == null
+    ? ``
+    : `<meta property="fb:app_id" content="${_config.app_id}" />`;
 
   return fbAppMeta + `
     <div id="fb-root"></div>
