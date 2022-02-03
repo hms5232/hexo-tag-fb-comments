@@ -4,6 +4,7 @@
 [![](https://img.shields.io/github/v/release/hms5232/hexo-tag-fb-comments?color=9cffff&include_prereleases&sort=semver)](https://github.com/hms5232/hexo-tag-fb-comments/releases)
 ![](https://img.shields.io/npm/dt/hexo-tag-fb-comments)
 ![](https://img.shields.io/npm/dependency-version/hexo-tag-fb-comments/peer/hexo)
+[![CircleCI](https://circleci.com/gh/hms5232/hexo-tag-fb-comments/tree/main.svg?style=svg)](https://circleci.com/gh/hms5232/hexo-tag-fb-comments/tree/main)
 [![](https://img.shields.io/github/commits-since/hms5232/hexo-tag-fb-comments/latest?include_prereleases&sort=semver&style=social)](https://github.com/hms5232/hexo-tag-fb-comments)
 ![](https://img.shields.io/npm/l/hexo-tag-fb-comments?style=flat-square)
 
