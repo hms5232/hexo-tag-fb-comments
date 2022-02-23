@@ -8,64 +8,55 @@
 [![](https://img.shields.io/github/commits-since/hms5232/hexo-tag-fb-comments/latest?include_prereleases&sort=semver&style=social)](https://github.com/hms5232/hexo-tag-fb-comments)
 ![](https://img.shields.io/npm/l/hexo-tag-fb-comments?style=flat-square)
 
-**正體中文（zh-TW）**| [English (en-US)](README_en-US.md)
+[正體中文（zh-TW）](README_zh-TW.md)| [English (en-US)](README_en-US.md)
 
 Facebook comments plugin for Hexo!
 
-## 需求
-* Hexo 5 或更新的版本
+## Requirement
+* Hexo 5 or above
 
-## 使用方式
-### 安裝套件
-如果你使用 npm：
+## Usage
+### Installation
+npm:
 ```
 npm i hexo-tag-fb-comments
 ```
-如果你使用 yarn：
+yarn:
 ```
 yarn add hexo-tag-fb-comments
 ```
-其他的請自行依照所使用的套件管理器指令安裝。
 
-### 設定
-#### 設定檔
-請在專案根目錄的 `_config.yml` 中加入下列設定：
+### Seting
+#### config
+Add the following config into your `_config.yml` which at project root:
 ```yml
 fb_comments:
   enabled: true
 ```
-至少要這樣，FB 留言外掛才會啟用。但個人推薦再加入 `app_id` 才可以統一管理留言。完整可設定的範例如下：
+Recommend additional item `app_id`, that you can manage comments in FB app. Here is complate config item:
 ```yml
 fb_comments:
-  enabled: true  # 是否開啟 FB 留言外掛
-  to: post  # 有 post、page 或 default（全部）等，詳細選項請參考 hexo injector
-  app_id:   # FB 應用程式編號
-  lang: zh_TW  # 語言
-  num_posts: 5  # 顯示幾則留言
-  order_by: reverse-time  # 留言排序依據，有 time 和 reverse-time
-  colorscheme: light  # 介面風格，有 light 和 dark 可選
-  width: 100%  # 寬度
+  enabled: true  # Enable FB comments plugin or not.
+  to: post  # post, page or default (everywhere), etc.
+  app_id:   # FB app id
+  lang: zh_TW  # language
+  num_posts: 5  # The number of comments to show by default.
+  order_by: reverse-time  # The order to use when displaying comments. Can be "reverse_time" or "time".
+  colorscheme: light  # The color scheme used by the comments plugin. Can be "light" or "dark".
+  width: 100%  # The width of the comments plugin on the webpage.
 ```
 
-各參數對應的臉書設定細節請參考：https://developers.facebook.com/docs/plugins/comments/
+See more on https://developers.facebook.com/docs/plugins/comments/
 
-#### 文章或頁面
-請在想顯示 FB 留言外掛的地方，放上下面這個標籤：
+#### Tag
+Put tag at where you wnat to embed the plugin:
 ```
 {% fb_comments %}
 ```
 
-如果嫌每次都要加麻煩的話，可以在鷹架（scaffolds）中直接修改產生文章的模板，以後產生指定 layout 的 md 時就會自動附在裏頭。
-
-## 和其他外掛的不同
-多數外掛都會要你修改主題檔案，但如果你使用的主題語言不是很多人使用的 EJS 或是和各路教學文不同，那就 GG 了；或是採用 HEXO 5 新方法──npm 安裝主題，那也 GG 了，根本不可能去修改 node_modules 的主題（更何況有些還是自動部署上去才安裝套件的）在某天發現一些 Hexo API，靈機一動之下想出了不用改動模板就能鑲嵌（發音同「千」別再念錯了！！）FB 留言板的方式，也幸運的實作出來，希望電腦前的你會喜歡。
-
-## 特別感謝
-感謝以下偉大的前人，才有今天這個套件的誕生：
-* [Getting started with Hexo Plug-ins, and scripts](https://dustinpfister.github.io/2018/01/03/hexo-plugins/)
-* https://github.com/lsmoura/hexo-fbcomments
-* https://github.com/GhostyJade/hexo-sponsor-button
-* https://github.com/fluid-dev/hexo-theme-fluid
+## Feature
+* No need to edit theme files.
+* You can change position of comments plugin by moving tag easily.
 
 ## LICENSE
 [MIT License](LICENSE)
