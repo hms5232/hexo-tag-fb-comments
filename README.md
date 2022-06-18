@@ -8,7 +8,7 @@
 [![](https://img.shields.io/github/commits-since/hms5232/hexo-tag-fb-comments/latest?include_prereleases&sort=semver&style=social)](https://github.com/hms5232/hexo-tag-fb-comments)
 ![](https://img.shields.io/npm/l/hexo-tag-fb-comments?style=flat-square)
 
-[正體中文（zh-TW）](README_zh-TW.md)| [English (en-US)](README_en-US.md)
+[正體中文（zh-TW）](docs/zh-TW.md)| [English (en-US)](docs/en-US.md)
 
 Facebook comments plugin for Hexo!
 

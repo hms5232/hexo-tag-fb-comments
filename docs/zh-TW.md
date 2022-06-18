@@ -1,6 +1,6 @@
 # hexo-tag-fb-comments
 
-**正體中文（zh-TW）**| [English (en-US)](README_en-US.md)
+**正體中文（zh-TW）**| [English (en-US)](en-US.md)
 
 Facebook comments plugin for Hexo!
 
