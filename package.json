@@ -28,6 +28,10 @@
     "url": "https://github.com/hms5232/hexo-tag-fb-comments/issues"
   },
   "homepage": "https://github.com/hms5232/hexo-tag-fb-comments#readme",
+  "funding": {
+    "type" : "individual",
+    "url" : "https://ko-fi.com/hms5232"
+  },
   "files": [
     "index.js"
   ],
