@@ -1,12 +1,16 @@
 let _config = null;
 
-// 抓設定
-function initConfig() {
-  if (!hexo.config.fb_comments) return false;
+/**
+ * Get config.
+ *
+ * @return {void}
+ */
+async function initConfig() {
+  if (!hexo.config.fb_comments) return;
 
   _config = hexo.config.fb_comments;
 
-  if (!_config.enabled) return false;
+  if (!_config.enabled) return;
 
   _config.to = _config.to || 'post';
   _config.lang = _config.lang || 'zh_TW';
@@ -14,13 +18,15 @@ function initConfig() {
   _config.orderBy = _config.order_by || 'reverse-time';
   _config.colorscheme = _config.colorscheme || 'light';
   _config.width = _config.width || '100%';
-
-  return true;
 }
 
-// 寫 <head>
+/**
+ * Build content in head.
+ *
+ * @return {string}
+ */
 function fbCommentsHead() {
-  if (!initConfig()) return '';
+  if (_config === null) return '';
 
   // if app_id no value => null
   // if app_id not exists => undefined
@@ -34,9 +40,15 @@ function fbCommentsHead() {
   `;
 }
 
-// 留言外掛
+/**
+ * Build tag content in body.
+ *
+ * @param {string[]} args
+ * @param {string} content
+ * @return {string}
+ */
 function fbComments(args, content) {
-  if (!initConfig()) return '';
+  if (_config === null) return '';
 
   return `
     <div class="fb-comments"
@@ -49,5 +61,7 @@ function fbComments(args, content) {
   `;
 }
 
-hexo.extend.injector.register('head_end', fbCommentsHead(), _config.to);
-hexo.extend.tag.register('fb_comments', fbComments, {async: true});
+initConfig().then(() => {
+  hexo.extend.injector.register('head_end', fbCommentsHead(), _config?.to);
+  hexo.extend.tag.register('fb_comments', fbComments, {async: true});
+});
