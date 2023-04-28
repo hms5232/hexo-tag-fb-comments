@@ -1,4 +1,4 @@
-let _config = null;
+const config = {};
 
 /**
  * Get config.
@@ -8,16 +8,17 @@ let _config = null;
 async function initConfig() {
   if (!hexo.config.fb_comments) return;
 
-  _config = hexo.config.fb_comments;
+  hexoConfig = hexo.config.fb_comments;
 
-  if (!_config.enabled) return;
+  if (!hexoConfig.enabled) return;
 
-  _config.to = _config.to || 'post';
-  _config.lang = _config.lang || 'zh_TW';
-  _config.numPosts = _config.num_posts || 5;
-  _config.orderBy = _config.order_by || 'reverse-time';
-  _config.colorscheme = _config.colorscheme || 'light';
-  _config.width = _config.width || '100%';
+  config.to = hexoConfig.to || 'post';
+  config.lang = hexoConfig.lang || 'zh_TW';
+  config.appId = hexoConfig.app_id || null;
+  config.numPosts = hexoConfig.num_posts || 5;
+  config.orderBy = hexoConfig.order_by || 'reverse-time';
+  config.colorscheme = hexoConfig.colorscheme || 'light';
+  config.width = hexoConfig.width || '100%';
 }
 
 /**
@@ -26,17 +27,17 @@ async function initConfig() {
  * @return {string}
  */
 function fbCommentsHead() {
-  if (_config === null) return '';
+  if (Object.keys(config).length == 0) return '';
 
   // if app_id no value => null
   // if app_id not exists => undefined
-  const fbAppMeta = _config.app_id == null
+  const fbAppMeta = config.appId == null
     ? ``
-    : `<meta property="fb:app_id" content="${_config.app_id}" />`;
+    : `<meta property="fb:app_id" content="${config.appId}" />`;
 
   return fbAppMeta + `
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/${_config.lang}/sdk.js#xfbml=1&version=v12.0"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/${config.lang}/sdk.js#xfbml=1&version=v12.0"></script>
   `;
 }
 
@@ -48,20 +49,20 @@ function fbCommentsHead() {
  * @return {string}
  */
 function fbComments(args, content) {
-  if (_config === null) return '';
+  if (Object.keys(config).length == 0) return '';
 
   return `
     <div class="fb-comments"
       data-href="${this.permalink}"
-      data-width="${_config.width}"
-      data-numposts="${_config.numPosts}"
-      data-order-by="${_config.orderBy}"
-      data-colorscheme="${_config.colorscheme}"
+      data-width="${config.width}"
+      data-numposts="${config.numPosts}"
+      data-order-by="${config.orderBy}"
+      data-colorscheme="${config.colorscheme}"
     ></div>
   `;
 }
 
 initConfig().then(() => {
-  hexo.extend.injector.register('head_end', fbCommentsHead(), _config?.to);
+  hexo.extend.injector.register('head_end', fbCommentsHead(), config?.to);
   hexo.extend.tag.register('fb_comments', fbComments, {async: true});
 });
