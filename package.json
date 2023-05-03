@@ -4,8 +4,9 @@
   "description": "Facebook comments plugin for Hexo!",
   "main": "index.js",
   "scripts": {
-    "test": "yarn run lint",
-    "lint": "eslint ."
+    "test": "yarn run lint && yarn run mocha",
+    "lint": "eslint .",
+    "mocha": "mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -29,8 +30,8 @@
   },
   "homepage": "https://github.com/hms5232/hexo-tag-fb-comments#readme",
   "funding": {
-    "type" : "individual",
-    "url" : "https://ko-fi.com/hms5232"
+    "type": "individual",
+    "url": "https://ko-fi.com/hms5232"
   },
   "files": [
     "*.js"
@@ -39,7 +40,9 @@
     "hexo": ">=5.0.0"
   },
   "devDependencies": {
+    "chai": "^4.3.7",
     "eslint": "^8.8.0",
-    "eslint-config-google": "^0.14.0"
+    "eslint-config-google": "^0.14.0",
+    "mocha": "^10.2.0"
   }
 }
