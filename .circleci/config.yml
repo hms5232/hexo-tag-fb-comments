@@ -18,7 +18,7 @@ jobs:
   # https://circleci.com/developer/orbs/orb/circleci/node
   yarn-test:
     docker:
-      - image: cimg/node:20.18
+      - image: cimg/node:20.19
     # https://circleci.com/docs/2.0/configuration-reference/#resourceclass
     resource_class: small
     steps:
