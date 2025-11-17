@@ -12,6 +12,11 @@
 
 Facebook comments plugin for Hexo!
 
+> [!CAUTION]
+> Meta has announced the Facebook comment plugin will be deprecated and on February 10, 2026. See the document for more detail.
+>
+> Meta 宣布將在 2026 年 2 月 10 日停止 Facebook 留言外掛，詳情請參閱官方文件。
+
 ## Requirement
 * Hexo 5 or above
 
